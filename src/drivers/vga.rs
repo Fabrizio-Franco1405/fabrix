@@ -2,6 +2,7 @@ const VGA_BUFFER: *mut u8 = 0xb8000 as *mut u8;
 
 pub struct Color(pub u8);
 
+#[allow(dead_code)]
 impl Color {
     pub const BLUE: Color = Color(0x0b);
     pub const WHITE: Color = Color(0x07);
