@@ -2,7 +2,6 @@
 #![no_main]
 
 mod kernel;
-mod libs;
 mod drivers;
 
 use core::panic::PanicInfo;
@@ -14,6 +13,5 @@ fn panic(_info: &PanicInfo) -> ! {
 
 #[unsafe(no_mangle)]
 pub extern "C" fn _start() -> ! {
-    kernel::init();
-    loop {}
+    kernel::start(); 
 }
